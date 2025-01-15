@@ -34,15 +34,6 @@ Use `coverlet` to generate the coverage report in `opencover` format:
 ```bash
 dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
 ```
-
-#### c. End the Analysis
-
-```bash
-dotnet sonarscanner end /d:sonar.token="your-sonar-token"
-```
-
-After the analysis completes, visit [http://localhost:9000](http://localhost:9000) to view the results.
-
 ---
 
 ## Project Structure
