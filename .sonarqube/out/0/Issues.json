@@ -33,6 +33,48 @@
           }
         },
         {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Subtract' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 20,
+                  "endLine": 22,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"Subtract\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 20,
+                  "endLine": 22,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "CA1822",
           "level": "note",
           "message": "El miembro \"Add\" no tiene acceso a los datos de la instancia y se puede marcar como static.",

@@ -27,36 +27,6 @@ git clone https://github.com/illuminaki/unit-testing-basics.git
 cd unit-testing-basics
 ```
 
----
-
-## Running SonarQube Analysis
-
-### 1. Start SonarQube Locally
-
-If you are using Docker, ensure SonarQube is running:
-
-```bash
-docker-compose up -d
-```
-
-Access SonarQube at [http://localhost:9000](http://localhost:9000).
-
-### 2. Run the Analysis
-
-From the root of the repository, execute the following commands:
-
-#### a. Begin the Analysis
-
-Replace `your-sonar-token` with your actual SonarQube token:
-
-```bash
-dotnet sonarscanner begin \
-  /k:"unit-testing-basics" \
-  /d:sonar.host.url="http://localhost:9000" \
-  /d:sonar.token="your-sonar-token" \
-  /d:sonar.cs.opencover.reportsPaths="tests/UnitTestingBasics.Tests/coverage.opencover.xml"
-```
-
 #### b. Run Tests and Collect Coverage
 
 Use `coverlet` to generate the coverage report in `opencover` format:
