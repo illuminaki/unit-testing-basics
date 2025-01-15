@@ -1,0 +1,1 @@
+ŒRv/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/UnitTestingBasics.Tests.csproj¢net7.0òCSharp11

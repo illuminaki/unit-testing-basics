@@ -1,0 +1,15 @@
+﻿/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/CalculatorTests.cs
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/GlobalUsings.cs
+/home/jsagudelo/.nuget/packages/microsoft.net.test.sdk/17.7.1/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs
+/home/jsagudelo/.nuget/packages/xunit.runner.visualstudio/2.4.5/build/netcoreapp3.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/jsagudelo/.nuget/packages/xunit.runner.visualstudio/2.4.5/build/netcoreapp3.1/xunit.runner.reporters.netcoreapp10.dll
+/home/jsagudelo/.nuget/packages/xunit.runner.visualstudio/2.4.5/build/netcoreapp3.1/xunit.runner.utility.netcoreapp10.dll
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/coverage.cobertura.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/runsettings.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/4264672b-c16d-4575-bd88-9ae3ecde4eea/coverage.cobertura.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/64a91698-4be7-4436-a6e7-22cfdc598359/coverage.cobertura.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/7e5287b1-6c1c-485b-9143-530c3ce23628/coverage.opencover.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/934cd0c4-1e27-4a6f-bd5a-9db8cdfba889/coverage.cobertura.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/95a2d43a-1d56-4d2e-a5fe-984126c0b63e/coverage.cobertura.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/99e0f906-b142-4489-9447-6110e40eb9f0/coverage.cobertura.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/a381ab80-7c26-4fe9-8912-c87c96c11d33/coverage.cobertura.xml

@@ -1,0 +1,31 @@
+›
+]/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs
+	namespace 	
+UnitTestingBasics
+ 
+{ 
+public 
+
+class 
+
+Calculator 
+{ 
+public 
+int 
+Add 
+( 
+int 
+a 
+, 
+int !
+b" #
+)# $
+{ 	
+return 
+a 
++ 
+b 
+; 
+} 	
+} 
+} 
