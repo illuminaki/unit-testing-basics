@@ -1,5 +1,5 @@
 i
-g/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/GlobalUsings.csî
+g/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/GlobalUsings.cs¿
 j/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/CalculatorTests.cs
 
   
@@ -11,5 +11,7 @@ j/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasi
   "
 
  5
-  #
-  "
+ !! #
+ !!- 4
+ !!6 =
+!! $$ "

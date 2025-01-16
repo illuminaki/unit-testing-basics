@@ -21,12 +21,20 @@ namespace UnitTestingBasics.Tests // Test namespace.
             Assert.Equal(5, result);
         }
 
-        // [Fact]
-        // public void Subtract_ReturnsCorrectDifference()
-        // {
-        //     var calculator = new Calculator();
-        //     int result = calculator.Subtract(5, 3);
-        //     Assert.Equal(2, result); // Verifies the difference.
-        // }
+        [Fact]
+        public void Subtract_ReturnsCorrectDifference()
+        {
+            // Arrange
+            var calculator = new Calculator();
+            int number1 = 5;
+            int number2 = 3;
+
+            // Act
+            var result = calculator.Subtract(number1, number2);
+
+            // Assert
+            Assert.Equal(2, result);
+        }
+
     }
 }

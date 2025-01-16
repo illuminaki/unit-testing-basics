@@ -5,25 +5,25 @@
     {
       "tool": {
         "name": "Compilador de Microsoft (R) Visual C#",
-        "version": "4.7.0.0",
-        "fileVersion": "4.7.0-3.23517.17 (9d4cc030)",
-        "semanticVersion": "4.7.0",
+        "version": "4.11.0.0",
+        "fileVersion": "4.11.0-3.24554.2 (bc1c3011)",
+        "semanticVersion": "4.11.0",
         "language": "es-CO"
       },
       "results": [
         {
           "ruleId": "S2325",
           "level": "warning",
-          "message": "Make 'Add' a static method.",
+          "message": "Make 'SubtractDuplicate' a static method.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
                 "region": {
-                  "startLine": 11,
+                  "startLine": 44,
                   "startColumn": 20,
-                  "endLine": 11,
-                  "endColumn": 23
+                  "endLine": 44,
+                  "endColumn": 37
                 }
               }
             }
@@ -54,6 +54,69 @@
           }
         },
         {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'AddDuplicate' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 20,
+                  "endLine": 33,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Add' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 20,
+                  "endLine": 11,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"AddDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 20,
+                  "endLine": 33,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "CA1822",
           "level": "note",
           "message": "El miembro \"Subtract\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
@@ -66,6 +129,27 @@
                   "startColumn": 20,
                   "endLine": 22,
                   "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"SubtractDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 20,
+                  "endLine": 44,
+                  "endColumn": 37
                 }
               }
             }
