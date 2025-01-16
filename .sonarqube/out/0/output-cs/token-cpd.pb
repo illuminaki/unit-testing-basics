@@ -1,4 +1,89 @@
-ê
+Ö
+_/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/EmailService.cs
+	namespace 	
+UnitTestingBasics
+ 
+{ 
+public 
+
+	interface 
+IEmailSender !
+{ 
+void 
+	SendEmail 
+( 
+string 
+	recipient '
+,' (
+string) /
+subject0 7
+,7 8
+string9 ?
+body@ D
+)D E
+;E F
+} 
+public 
+
+class 
+EmailService 
+{ 
+private 
+readonly 
+IEmailSender %
+_emailSender& 2
+;2 3
+public 
+EmailService 
+( 
+IEmailSender (
+emailSender) 4
+)4 5
+{ 	
+_emailSender 
+= 
+emailSender &
+;& '
+} 	
+public'' 
+bool'' 
+SendWelcomeEmail'' $
+(''$ %
+string''% +
+	userEmail'', 5
+)''5 6
+{(( 	
+if)) 
+()) 
+string)) 
+.)) 
+IsNullOrEmpty)) $
+())$ %
+	userEmail))% .
+))). /
+)))/ 0
+{** 
+return,, 
+false,, 
+;,, 
+}-- 
+_emailSender00 
+.00 
+	SendEmail00 "
+(00" #
+	userEmail11 
+,11 
+$str22 (
+,22( )
+$str33 G
+)44 
+;44 
+return66 
+true66 
+;66 
+}77 	
+}88 
+}99 ê
 
 ]/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs
 	namespace 	
