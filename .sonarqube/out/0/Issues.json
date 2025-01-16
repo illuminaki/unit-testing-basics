@@ -14,27 +14,6 @@
         {
           "ruleId": "S2325",
           "level": "warning",
-          "message": "Make 'SubtractDuplicate' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
-                "region": {
-                  "startLine": 44,
-                  "startColumn": 20,
-                  "endLine": 44,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
           "message": "Make 'Subtract' a static method.",
           "locations": [
             {
@@ -77,6 +56,27 @@
         {
           "ruleId": "S2325",
           "level": "warning",
+          "message": "Make 'SubtractDuplicate' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 20,
+                  "endLine": 44,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
           "message": "Make 'Add' a static method.",
           "locations": [
             {
@@ -98,16 +98,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "El miembro \"AddDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "message": "El miembro \"Add\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
                 "region": {
-                  "startLine": 33,
+                  "startLine": 11,
                   "startColumn": 20,
-                  "endLine": 33,
-                  "endColumn": 32
+                  "endLine": 11,
+                  "endColumn": 23
                 }
               }
             }
@@ -140,16 +140,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "El miembro \"SubtractDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "message": "El miembro \"AddDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
                 "region": {
-                  "startLine": 44,
+                  "startLine": 33,
                   "startColumn": 20,
-                  "endLine": 44,
-                  "endColumn": 37
+                  "endLine": 33,
+                  "endColumn": 32
                 }
               }
             }
@@ -161,16 +161,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "El miembro \"Add\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "message": "El miembro \"SubtractDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
                 "region": {
-                  "startLine": 11,
+                  "startLine": 44,
                   "startColumn": 20,
-                  "endLine": 11,
-                  "endColumn": 23
+                  "endLine": 44,
+                  "endColumn": 37
                 }
               }
             }

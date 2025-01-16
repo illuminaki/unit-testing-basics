@@ -1,4 +1,9 @@
-•
+Ñ
 j/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/CalculatorTests.csUnitTestingBasics.Tests@
 'UnitTestingBasics.Tests.CalculatorTestsAdd_ReturnsCorrectSumL
-'UnitTestingBasics.Tests.CalculatorTests!Subtract_ReturnsCorrectDifference
+'UnitTestingBasics.Tests.CalculatorTests!Subtract_ReturnsCorrectDifferenceZ
+'UnitTestingBasics.Tests.CalculatorTests/Subtract_ReturnsCorrectDifference_MultipleCasesI
+'UnitTestingBasics.Tests.CalculatorTestsAddDuplicate_ReturnsCorrectSumW
+'UnitTestingBasics.Tests.CalculatorTests,AddDuplicate_ReturnsCorrectSum_MultipleCasesU
+'UnitTestingBasics.Tests.CalculatorTests*SubtractDuplicate_ReturnsCorrectDifferencec
+'UnitTestingBasics.Tests.CalculatorTests8SubtractDuplicate_ReturnsCorrectDifference_MultipleCases

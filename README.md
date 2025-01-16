@@ -13,10 +13,8 @@ Before getting started, ensure the following tools are installed on your system:
 3. [SonarQube](https://www.sonarqube.org/) (running locally or on a server)
 4. `dotnet-sonarscanner`:
    ```bash
-   dotnet tool install --global dotnet-sonarscanner
+      dotnet tool install --global dotnet-sonarscanner
    ```
-
----
 
 ## Getting Started
 

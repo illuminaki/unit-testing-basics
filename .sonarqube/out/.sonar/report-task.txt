@@ -2,5 +2,5 @@ projectKey=csharp
 serverUrl=http://localhost:9000
 serverVersion=25.1.0.102122
 dashboardUrl=http://localhost:9000/dashboard?id=csharp
-ceTaskId=7568cd42-ed22-437c-8255-6290adf97b32
-ceTaskUrl=http://localhost:9000/api/ce/task?id=7568cd42-ed22-437c-8255-6290adf97b32
+ceTaskId=b523af58-24a7-4c37-9e54-2473f337381c
+ceTaskUrl=http://localhost:9000/api/ce/task?id=b523af58-24a7-4c37-9e54-2473f337381c

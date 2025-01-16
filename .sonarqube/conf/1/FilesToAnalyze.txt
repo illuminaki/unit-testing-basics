@@ -9,6 +9,7 @@
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/runsettings.xml
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/069764c9-aab1-4f93-8777-3510a4129b5e/coverage.opencover.xml
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/107b458b-3b14-423f-9637-4a94b5ce44d3/coverage.cobertura.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/41fadc75-7e53-45a4-8b83-7d3bb62ca40c/coverage.opencover.xml
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/4264672b-c16d-4575-bd88-9ae3ecde4eea/coverage.cobertura.xml
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/5314d543-ec60-4de4-8c98-e80b4a81f97f/coverage.opencover.xml
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/64a91698-4be7-4436-a6e7-22cfdc598359/coverage.cobertura.xml
@@ -23,3 +24,4 @@
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/c4bcf74c-6262-49df-a0fb-5e5f52389963/coverage.opencover.xml
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/dbbff80f-034e-44fd-bc30-6b85c1469caf/coverage.opencover.xml
 /home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/e5db5fc9-cf6b-47f8-9796-76133d7702b1/coverage.opencover.xml
+/home/jsagudelo/codigo/microsoft/test/unit-testing-basics/tests/UnitTestingBasics.Tests/TestResults/fef83a18-1adf-4c3d-9844-1f6f3d6d99d1/coverage.opencover.xml
