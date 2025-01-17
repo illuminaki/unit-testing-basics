@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # 2. Start SonarQube container with no security
+      # 2. Start SonarQube container with no security and wait for "UP"
       - name: Start SonarQube container
         run: |
           docker run -d --name sonar \
@@ -23,8 +23,23 @@ jobs:
             -e SONAR_SECURITY_REALM=none \
             -e SONAR_SECURITY_STRATEGY=none \
             sonarqube:latest
+
           echo "Waiting for SonarQube to be ready..."
-          sleep 180
+
+          # Instala 'jq' para procesar JSON (por si no está instalado en el runner)
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+
+          for i in {1..10}; do
+            STATUS=$(curl -s http://localhost:9000/api/system/status | jq -r .status || true)
+            echo "SonarQube status: $STATUS"
+            if [ "$STATUS" = "UP" ]; then
+              echo "SonarQube is up!"
+              break
+            fi
+            echo "SonarQube not ready yet... attempt $i"
+            sleep 15
+          done
 
       # 3. Setup .NET (puedes cambiar la versión que necesites)
       - name: Setup .NET
