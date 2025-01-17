@@ -23,7 +23,7 @@ jobs:
             -e SONAR_SECURITY_REALM=none \
             -e SONAR_SECURITY_STRATEGY=none \
             sonarqube:latest
-          sleep 60
+          sleep 280
 
 
       # 3. Setup .NET (usa la versión que necesites; aquí .NET 8.0)
