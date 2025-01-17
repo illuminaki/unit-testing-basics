@@ -25,7 +25,7 @@ jobs:
       - name: Install SonarScanner for .NET
         run: |
           dotnet tool install --global dotnet-sonarscanner --version 9.0.2
-          echo "::add-path::$HOME/.dotnet/tools"
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
       # 4. Iniciar análisis con SonarScanner
       - name: SonarScanner Begin
