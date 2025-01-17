@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out the code
+      # 1. Check out the code from your repo
       - name: Checkout
         uses: actions/checkout@v3
 
-      # 2. Iniciar SonarQube en Docker
+      # 2. Start SonarQube container with no security
       - name: Start SonarQube container
         run: |
           docker run -d --name sonar \
@@ -23,10 +23,10 @@ jobs:
             -e SONAR_SECURITY_REALM=none \
             -e SONAR_SECURITY_STRATEGY=none \
             sonarqube:latest
-          sleep 280
+          echo "Waiting for SonarQube to be ready..."
+          sleep 180
 
-
-      # 3. Setup .NET (usa la versión que necesites; aquí .NET 8.0)
+      # 3. Setup .NET (puedes cambiar la versión que necesites)
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
@@ -38,13 +38,12 @@ jobs:
           dotnet tool install --global dotnet-sonarscanner --version 9.0.2
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
-      # 5. Iniciar análisis con SonarScanner
+      # 5. Iniciar análisis con SonarScanner (SIN credenciales)
       - name: SonarScanner Begin
         run: |
           dotnet sonarscanner begin \
             /k:"csharp" \
             /d:sonar.host.url="http://localhost:9000" \
-            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.cs.opencover.reportsPaths="tests/UnitTestingBasics.Tests/**/coverage.opencover.xml"
 
       # 6. Compilar el proyecto
@@ -53,9 +52,10 @@ jobs:
 
       # 7. Ejecutar las pruebas con cobertura
       - name: Test with Coverage
-        run: dotnet test unit-testing-basics.sln --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+        run: dotnet test unit-testing-basics.sln \
+          --collect:"XPlat Code Coverage" \
+          -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
 
-      # 8. Finalizar análisis y subir a SonarQube
+      # 8. Finalizar análisis y subir a SonarQube (SIN credenciales)
       - name: SonarScanner End
-        run: |
-          dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+        run: dotnet sonarscanner end
