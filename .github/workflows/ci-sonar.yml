@@ -21,13 +21,13 @@ jobs:
             -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true \
             -e SONAR_SECURITY_REALM=none \
             -e SONAR_SECURITY_STRATEGY=none \
-            sonarqube:latest
+            sonarqube:community
 
           echo "Waiting for SonarQube to be ready..."
           sudo apt-get update -y
           sudo apt-get install -y jq
 
-          for i in {1..10}; do
+          for i in {1..20}; do
             STATUS=$(curl -s http://localhost:9000/api/system/status | jq -r .status || true)
             echo "SonarQube status: $STATUS"
             if [ "$STATUS" = "UP" ]; then
@@ -37,6 +37,11 @@ jobs:
             echo "SonarQube not ready yet... attempt $i"
             sleep 15
           done
+
+          if [ "$STATUS" != "UP" ]; then
+            echo "SonarQube did not start in time. Exiting..."
+            exit 1
+          fi
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
