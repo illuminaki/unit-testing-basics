@@ -1,6 +1,8 @@
 name: CI and Sonar Analysis
 
 on:
+  push:
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
