@@ -1,0 +1,48 @@
+name: CI and Sonar Analysis
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the code
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 2. Setup .NET (usa la versión que necesites; aquí net8.0)
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "8.0.x"
+
+      # 3. Instalar sonarscanner globalmente (opcional, o se hace con dotnet tool)
+      - name: Install SonarScanner for .NET
+        run: |
+          dotnet tool install --global dotnet-sonarscanner --version 9.0.2
+          echo "::add-path::$HOME/.dotnet/tools"
+
+      # 4. Iniciar análisis con SonarScanner
+      - name: SonarScanner Begin
+        run: |
+          dotnet sonarscanner begin \
+            /k:"csharp" \
+            /d:sonar.host.url="http://localhost:9000" \
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
+            /d:sonar.cs.opencover.reportsPaths="tests/UnitTestingBasics.Tests/**/coverage.opencover.xml"
+
+      # 5. Compilar el proyecto
+      - name: Build
+        run: dotnet build unit-testing-basics.sln --no-restore --configuration Debug
+
+      # 6. Ejecutar las pruebas con cobertura
+      - name: Test with Coverage
+        run: dotnet test unit-testing-basics.sln --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+
+      # 7. Finalizar análisis y subir a SonarQube
+      - name: SonarScanner End
+        run: |
+          dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

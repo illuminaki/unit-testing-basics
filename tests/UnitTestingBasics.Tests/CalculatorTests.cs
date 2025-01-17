@@ -5,6 +5,7 @@ namespace UnitTestingBasics.Tests // Test namespace.
 {
     public class CalculatorTests // Test class for Calculator.
     {
+
         [Fact]
         public void Add_ReturnsCorrectSum() // Test for Add method.
         {
@@ -35,7 +36,7 @@ namespace UnitTestingBasics.Tests // Test namespace.
             Assert.Equal(5, result); // Verifies the difference.
         }
 
-        [Theory] // Multiple test cases for Subtract method.
+        [Theory]
         [InlineData(10, 5, 5)]
         [InlineData(0, 0, 0)]
         [InlineData(-5, -5, 0)]
@@ -53,11 +54,8 @@ namespace UnitTestingBasics.Tests // Test namespace.
             Assert.Equal(expected, result);
         }
 
-        // ------------------------------
-        // Tests for AddDuplicate method
-        // ------------------------------
         [Fact]
-        public void AddDuplicate_ReturnsCorrectSum() // Single test for AddDuplicate method.
+        public void AddDuplicate_ReturnsCorrectSum()
         {
             // Arrange
             var calculator = new Calculator();
@@ -71,7 +69,7 @@ namespace UnitTestingBasics.Tests // Test namespace.
             Assert.Equal(5, result);
         }
 
-        [Theory] // Multiple test cases for AddDuplicate method.
+        [Theory]
         [InlineData(1, 1, 2)]
         [InlineData(0, 0, 0)]
         [InlineData(-2, -3, -5)]
@@ -88,11 +86,8 @@ namespace UnitTestingBasics.Tests // Test namespace.
             Assert.Equal(expected, result);
         }
 
-        // ---------------------------------
-        // Tests for SubtractDuplicate method
-        // ---------------------------------
         [Fact]
-        public void SubtractDuplicate_ReturnsCorrectDifference() // Single test for SubtractDuplicate method.
+        public void SubtractDuplicate_ReturnsCorrectDifference()
         {
             // Arrange
             var calculator = new Calculator();
@@ -106,7 +101,7 @@ namespace UnitTestingBasics.Tests // Test namespace.
             Assert.Equal(5, result);
         }
 
-        [Theory] // Multiple test cases for SubtractDuplicate method.
+        [Theory]
         [InlineData(10, 5, 5)]
         [InlineData(5, 10, -5)]
         [InlineData(0, 0, 0)]
@@ -119,6 +114,66 @@ namespace UnitTestingBasics.Tests // Test namespace.
 
             // Act
             var result = calculator.SubtractDuplicate(a, b);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Multiply_ReturnsCorrectProduct()
+        {
+            // Arrange
+            var calculator = new Calculator();
+
+            // Act
+            int result = calculator.Multiply(6, 4);
+
+            // Assert
+            Assert.Equal(24, result);
+        }
+
+        [Theory]
+        [InlineData(2, 3, 6)]
+        [InlineData(-2, 3, -6)]
+        [InlineData(0, 5, 0)]
+        [InlineData(-3, -3, 9)]
+        public void Multiply_ReturnsCorrectProduct_MultipleCases(int a, int b, int expected)
+        {
+            // Arrange
+            var calculator = new Calculator();
+
+            // Act
+            int result = calculator.Multiply(a, b);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Divide_ReturnsCorrectQuotient()
+        {
+            // Arrange
+            var calculator = new Calculator();
+
+            // Act
+            int result = calculator.Divide(10, 2);
+
+            // Assert
+            Assert.Equal(5, result);
+        }
+
+        [Theory]
+        [InlineData(9, 3, 3)]
+        [InlineData(-9, 3, -3)]
+        [InlineData(6, -2, -3)]
+        [InlineData(-8, -2, 4)]
+        public void Divide_ReturnsCorrectQuotient_MultipleCases(int a, int b, int expected)
+        {
+            // Arrange
+            var calculator = new Calculator();
+
+            // Act
+            int result = calculator.Divide(a, b);
 
             // Assert
             Assert.Equal(expected, result);

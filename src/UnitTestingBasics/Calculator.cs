@@ -45,5 +45,28 @@ namespace UnitTestingBasics // Declares the namespace.
         {
             return a - b; // Duplicate logic.
         }
+
+        /// <summary>
+        /// Method to multiply two numbers.
+        /// </summary>
+        /// <param name="a">First number.</param>
+        /// <param name="b">Second number.</param>
+        /// <returns>The product of both numbers.</returns>
+        public int Multiply(int a, int b)
+        {
+            return a * b;
+        }
+
+        /// <summary>
+        /// Method to divide two numbers.
+        /// Note: No error handling for division by zero here.
+        /// </summary>
+        /// <param name="a">Dividend.</param>
+        /// <param name="b">Divisor.</param>
+        /// <returns>The quotient of a divided by b.</returns>
+        public int Divide(int a, int b)
+        {
+            return a / b;
+        }
     }
 }

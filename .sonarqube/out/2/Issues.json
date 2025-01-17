@@ -14,48 +14,6 @@
         {
           "ruleId": "S2325",
           "level": "warning",
-          "message": "Make 'Subtract' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 20,
-                  "endLine": 22,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'AddDuplicate' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
-                "region": {
-                  "startLine": 33,
-                  "startColumn": 20,
-                  "endLine": 33,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2325",
-          "level": "warning",
           "message": "Make 'Multiply' a static method.",
           "locations": [
             {
@@ -66,6 +24,27 @@
                   "startColumn": 20,
                   "endLine": 55,
                   "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Add' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 20,
+                  "endLine": 11,
+                  "endColumn": 23
                 }
               }
             }
@@ -98,16 +77,16 @@
         {
           "ruleId": "S2325",
           "level": "warning",
-          "message": "Make 'Divide' a static method.",
+          "message": "Make 'AddDuplicate' a static method.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
                 "region": {
-                  "startLine": 67,
+                  "startLine": 33,
                   "startColumn": 20,
-                  "endLine": 67,
-                  "endColumn": 26
+                  "endLine": 33,
+                  "endColumn": 32
                 }
               }
             }
@@ -119,16 +98,37 @@
         {
           "ruleId": "S2325",
           "level": "warning",
-          "message": "Make 'Add' a static method.",
+          "message": "Make 'Subtract' a static method.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
                 "region": {
-                  "startLine": 11,
+                  "startLine": 22,
                   "startColumn": 20,
-                  "endLine": 11,
-                  "endColumn": 23
+                  "endLine": 22,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'Divide' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 20,
+                  "endLine": 67,
+                  "endColumn": 26
                 }
               }
             }
@@ -150,48 +150,6 @@
                   "startColumn": 20,
                   "endLine": 22,
                   "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "El miembro \"Divide\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
-                "region": {
-                  "startLine": 67,
-                  "startColumn": 20,
-                  "endLine": 67,
-                  "endColumn": 26
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "El miembro \"AddDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
-                "region": {
-                  "startLine": 33,
-                  "startColumn": 20,
-                  "endLine": 33,
-                  "endColumn": 32
                 }
               }
             }
@@ -255,6 +213,48 @@
                   "startColumn": 20,
                   "endLine": 11,
                   "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"AddDuplicate\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 20,
+                  "endLine": 33,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"Divide\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/jsagudelo/codigo/microsoft/test/unit-testing-basics/src/UnitTestingBasics/Calculator.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 20,
+                  "endLine": 67,
+                  "endColumn": 26
                 }
               }
             }
