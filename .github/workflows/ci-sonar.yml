@@ -18,9 +18,13 @@ jobs:
       # 2. Iniciar SonarQube en Docker
       - name: Start SonarQube container
         run: |
-          docker run -d --name sonar -p 9000:9000 sonarqube:latest
-          echo "Waiting for SonarQube to be ready..."
+          docker run -d --name sonar \
+            -p 9000:9000 \
+            -e SONAR_SECURITY_REALM=none \
+            -e SONAR_SECURITY_STRATEGY=none \
+            sonarqube:latest
           sleep 60
+
 
       # 3. Setup .NET (usa la versión que necesites; aquí .NET 8.0)
       - name: Setup .NET
