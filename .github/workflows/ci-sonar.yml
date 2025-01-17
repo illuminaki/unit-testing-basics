@@ -15,9 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # 2. Start SonarQube container with no security and wait for "UP"
+      # 2. Start SonarQube container (no security) and wait for "UP"
       - name: Start SonarQube container
         run: |
+          # Levanta SonarQube
           docker run -d --name sonar \
             -p 9000:9000 \
             -e SONAR_SECURITY_REALM=none \
@@ -26,10 +27,11 @@ jobs:
 
           echo "Waiting for SonarQube to be ready..."
 
-          # Instala 'jq' para procesar JSON (por si no está instalado en el runner)
+          # Instala 'jq' para parsear JSON
           sudo apt-get update -y
           sudo apt-get install -y jq
 
+          # Bucle de hasta 10 intentos, 15s cada uno (~2.5 minutos)
           for i in {1..10}; do
             STATUS=$(curl -s http://localhost:9000/api/system/status | jq -r .status || true)
             echo "SonarQube status: $STATUS"
@@ -37,11 +39,11 @@ jobs:
               echo "SonarQube is up!"
               break
             fi
-            echo "SonarQube not ready yet... attempt $i"
+            echo "SonarQube not ready... attempt $i"
             sleep 15
           done
 
-      # 3. Setup .NET (puedes cambiar la versión que necesites)
+      # 3. Setup .NET (elige tu versión)
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
@@ -53,7 +55,7 @@ jobs:
           dotnet tool install --global dotnet-sonarscanner --version 9.0.2
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
-      # 5. Iniciar análisis con SonarScanner (SIN credenciales)
+      # 5. Iniciar análisis con SonarScanner (SIN credenciales, seguridad desactivada)
       - name: SonarScanner Begin
         run: |
           dotnet sonarscanner begin \
@@ -67,9 +69,10 @@ jobs:
 
       # 7. Ejecutar las pruebas con cobertura
       - name: Test with Coverage
-        run: dotnet test unit-testing-basics.sln \
-          --collect:"XPlat Code Coverage" \
-          -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+        run: |
+          dotnet test unit-testing-basics.sln \
+            --collect:"XPlat Code Coverage" \
+            -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
 
       # 8. Finalizar análisis y subir a SonarQube (SIN credenciales)
       - name: SonarScanner End
